@@ -253,12 +253,17 @@ char* vf_get_receiver_name(const char* provider_name)
 static void vfm_init(void)
 {
 
+#ifdef CONFIG_VIDEO_MESON_VDEC
+    char def_id[] = "default";
+    char def_name_chain[] = "decoder m2m";
+#else
 #ifdef CONFIG_POST_PROCESS_MANAGER
     char def_id[] = "default";
     char def_name_chain[] = "decoder ppmgr amvideo";
 #else
     char def_id[] = "default";
     char def_name_chain[] = "decoder amvideo";
+#endif
 #endif
 #ifdef CONFIG_TVIN_VIUIN
     char def_ext_id[] = "default_ext";
@@ -403,7 +408,7 @@ static ssize_t vfm_map_store(struct class *class,
 	return count;
 }
 
-static CLASS_ATTR(map, 0666, vfm_map_show, vfm_map_store);
+static CLASS_ATTR(map, 0664, vfm_map_show, vfm_map_store);
 
 static struct class vfm_class = {
 	.name = CLS_NAME,
