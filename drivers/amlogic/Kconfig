@@ -78,6 +78,14 @@ source "drivers/amlogic/dvb_tv/Kconfig"
 source "drivers/amlogic/ion_dev/Kconfig"
 
 #
+#	GPU
+#
+comment "GPU (ARM Mali)"
+source "drivers/amlogic/gpu/ump/Kconfig"
+source "drivers/amlogic/gpu/mali/Kconfig"
+source "drivers/amlogic/ion_dev/Kconfig"
+
+#
 # crypto
 #
 source "drivers/amlogic/crypto/Kconfig"
