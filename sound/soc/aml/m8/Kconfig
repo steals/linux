@@ -25,13 +25,3 @@ config SND_AML_M8_PCM
 config SND_AML_M_DUMMY_CODEC
     tristate "AML M series board with DUMMY_CODEC"
     select SND_SOC_DUMMY_CODEC
-
-config SND_ODROID_HIFI1
-        tristate "ODROID HiFi-Shield1(pcm5102) Support"
-        depends on SND_AML_M8_SOC && MACH_MESON8B_ODROIDC
-        select SND_SOC_PCM5102
-
-config SND_ODROID_HIFI2
-        tristate "ODROID HiFi-Shield2(pcm5242) Support"
-        depends on SND_AML_M8_SOC && MACH_MESON8B_ODROIDC
-        select SND_SOC_PCM512X
