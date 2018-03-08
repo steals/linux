@@ -1,9 +1,9 @@
 /*
- * Copyright (C) 2010-2015 ARM Limited. All rights reserved.
- *
+ * Copyright (C) 2010-2014, 2016 ARM Limited. All rights reserved.
+ * 
  * This program is free software and is provided to you under the terms of the GNU General Public License version 2
  * as published by the Free Software Foundation, and any use by you of this program is subject to the terms of such GNU licence.
- *
+ * 
  * A copy of the licence is included with the program, and can also be obtained from Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
@@ -12,7 +12,7 @@
 #define __UMP_KERNEL_COMMON_H__
 
 #include "ump_kernel_types.h"
-#include "ump_kernel_interface.h"
+#include <ump/ump_kernel_interface.h>
 #include "ump_kernel_descriptor_mapping.h"
 #include "ump_kernel_random_mapping.h"
 #include "ump_kernel_memory_backend.h"
@@ -110,7 +110,7 @@ extern struct ump_dev device;
 
 _mali_osk_errcode_t ump_kernel_constructor(void);
 void ump_kernel_destructor(void);
-int map_errcode(_mali_osk_errcode_t err);
+int ump_map_errcode(_mali_osk_errcode_t err);
 
 /**
  * variables from user space cannot be dereferenced from kernel space; tagging them
