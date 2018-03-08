@@ -119,7 +119,7 @@ obj-$(CONFIG_AML_WATCHDOG) += watchdog/
 
 obj-$(CONFIG_MALI400) += gpu/mali/
 obj-$(CONFIG_UMP) += gpu/ump/
-obj-$(CONFIG_UMPLOCK)   += umplock/
+obj-$(CONFIG_UMPLOCK)   += gpu/umplock/
 
 obj-$(CONFIG_AMLOGIC_ION) += ion_dev/
 
